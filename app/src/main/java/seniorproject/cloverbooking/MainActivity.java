@@ -12,11 +12,36 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        defineButtons();
     }
 
-    public void buttonOnClick(View v) {
-        Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), CreateActivity.class));
-
+    public void defineButtons() {
+        findViewById(R.id.viewEntriesButton).setOnClickListener(buttonClickListener);
+        findViewById(R.id.createEntryButton).setOnClickListener(buttonClickListener);
+        findViewById(R.id.editEntriesButton).setOnClickListener(buttonClickListener);
     }
+
+    private View.OnClickListener buttonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.viewEntriesButton:
+                    startActivity(new Intent(getApplicationContext(), ViewActivity.class));
+                    break;
+                case R.id.createEntryButton:
+                    startActivity(new Intent(getApplicationContext(), CreateActivity.class));
+                    break;
+                case R.id.editEntriesButton:
+                    startActivity(new Intent(getApplicationContext(), EditActivity.class));
+                    break;
+            }
+        }
+    };
+
+    //public void buttonOnClick(View v) {
+    //    Button button = (Button) v;
+    //    startActivity(new Intent(getApplicationContext(), CreateActivity.class));
+
+    //}
 }

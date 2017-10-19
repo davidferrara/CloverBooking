@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/phoneForm1"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="000-000-0000"
+        android:textSize="16sp"
+        android:visibility="visible"
+        android:layout_marginStart="80dp"
+        android:layout_alignBaseline="@+id/phoneText1"
+        android:layout_alignBottom="@+id/phoneText1"
+        android:layout_alignStart="@+id/submitButton1" />
+
+    <TextView
+        android:id="@+id/phoneText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/submitButton1"
+        android:layout_alignStart="@+id/emailText1" />
+
+    <TextView
+        android:id="@+id/nameText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/nameForm1"
+        android:layout_alignBottom="@+id/nameForm1"
+        android:layout_toStartOf="@+id/phoneForm1" />
+
+    <TextView
+        android:id="@+id/emailText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/emailForm1"
+        android:layout_alignBottom="@+id/emailForm1"
+        android:layout_alignStart="@+id/nameText1" />
+
+    <EditText
+        android:id="@+id/emailForm1"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="email@example.com"
+        android:textSize="16sp"
+        android:visibility="visible"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/phoneForm1"
+        android:layout_alignStart="@+id/phoneForm1" />
+
+    <EditText
+        android:id="@+id/nameForm1"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="First Last"
+        android:textSize="16sp"
+        android:visibility="visible"
+        android:layout_above="@+id/emailForm1"
+        android:layout_alignStart="@+id/emailForm1"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:id="@+id/submitButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:visibility="visible"
+        android:layout_marginBottom="39dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
